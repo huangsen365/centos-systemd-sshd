@@ -14,3 +14,9 @@ RUN rm -rf /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN yum makecache fast
+RUN yum -y install openssh-clients openssh-server
+RUN systemctl enable sshd.service
+
+EXPOSE 22
+
+CMD ["/usr/sbin/init"]
