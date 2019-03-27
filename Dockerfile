@@ -15,7 +15,8 @@ RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN yum makecache fast
 RUN yum -y install openssh-clients openssh-server \
-        iproute net-tools
+        iproute \
+        net-tools
 RUN systemctl enable sshd.service
 
 EXPOSE 22
