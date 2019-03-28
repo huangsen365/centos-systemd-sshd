@@ -17,7 +17,8 @@ RUN yum makecache fast
 RUN yum -y install openssh-clients openssh-server \
         iproute \
         net-tools \
-        nmap
+        nmap \
+        vim-enhanced
 RUN systemctl enable sshd.service
 
 EXPOSE 22
