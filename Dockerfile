@@ -4,7 +4,7 @@ MAINTAINER "Your Name" <you@example.com>
 
 RUN sed -i 's/tsflags/\#tsflags/g' /etc/yum.conf
 RUN echo "ip_resolve=4" >> /etc/yum.conf
-RUN yum -y install man-pages man-db man
+RUN yum -y install man-pages man-db man centos-release-scl
 
 RUN echo "export HISTSIZE=20000" >> /etc/bashrc
 RUN echo "export HISTTIMEFORMAT=\"%F %T \"" >> /etc/bashrc
@@ -19,7 +19,7 @@ RUN yum -y install openssh-clients openssh-server \
         net-tools \
         nmap \
         vim-enhanced \
-        centos-release-scl
+        rh-python36
 RUN systemctl enable sshd.service
 
 EXPOSE 22
