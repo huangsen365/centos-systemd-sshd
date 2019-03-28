@@ -18,7 +18,8 @@ RUN yum -y install openssh-clients openssh-server \
         iproute \
         net-tools \
         nmap \
-        vim-enhanced
+        vim-enhanced \
+        centos-release-scl
 RUN systemctl enable sshd.service
 
 EXPOSE 22
