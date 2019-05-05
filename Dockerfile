@@ -20,7 +20,8 @@ RUN yum -y install openssh-clients openssh-server \
         nmap \
         vim-enhanced \
         rh-python36 \
-        telnet
+        telnet \
+        bind
 RUN systemctl enable sshd.service
 
 EXPOSE 22
