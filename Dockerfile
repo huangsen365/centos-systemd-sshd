@@ -23,6 +23,10 @@ RUN yum -y install openssh-clients openssh-server \
         rh-python36 \
         telnet \
         bind
+
+COPY vimrc_append_conf.txt /tmp
+RUN cat /tmp/vimrc_append_conf.txt >> /etc/vimrc
+
 RUN systemctl enable sshd.service
 
 EXPOSE 22
