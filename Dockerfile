@@ -5,7 +5,8 @@ MAINTAINER "Your Name" <you@example.com>
 RUN sed -i 's/tsflags/\#tsflags/g' /etc/yum.conf
 RUN echo "ip_resolve=4" >> /etc/yum.conf
 RUN yum -y update
-RUN yum -y install man-pages man-db man centos-release-scl
+RUN yum -y install epel-release
+RUN yum -y install man-pages man-db man centos-release-scl htop iftop tmux
 
 RUN echo "export HISTSIZE=20000" >> /etc/bashrc
 RUN echo "export HISTTIMEFORMAT=\"%F %T \"" >> /etc/bashrc
