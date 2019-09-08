@@ -8,7 +8,7 @@ RUN yum -y update
 RUN yum -y install epel-release
 RUN yum -y install man-pages man-db man centos-release-scl htop iftop tmux unzip wget
 
-RUN echo "export HISTSIZE=20000" >> /etc/bashrc
+RUN echo "export HISTSIZE=999999999" >> /etc/bashrc
 RUN echo "export HISTTIMEFORMAT=\"%F %T \"" >> /etc/bashrc
 
 
